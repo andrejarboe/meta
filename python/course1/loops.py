@@ -14,3 +14,8 @@ while count < len(favorites):
 
 for idx, item in enumerate(favorites):
     print(idx, item)
+
+# search for churros
+for dessert in favorites:
+    if dessert == 'Churros':
+        print('Yes! One of my favorite desserts is', dessert)        
