@@ -17,5 +17,7 @@ for idx, item in enumerate(favorites):
 
 # search for churros
 for dessert in favorites:
-    if dessert == 'Churros':
-        print('Yes! One of my favorite desserts is', dessert)        
+    if dessert == 'Pudding':
+        print('Yes one of my favorite desserts is', dessert) 
+else:
+    print('No sorry, that dessert is not on my list')
