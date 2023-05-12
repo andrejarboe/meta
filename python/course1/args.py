@@ -1,4 +1,3 @@
-# kwargs
 # args
 
 def sumOf(*args):
