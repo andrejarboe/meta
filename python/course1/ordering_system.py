@@ -35,11 +35,11 @@ def calculate_subtotal(order):
     """
     print('Calculating bill subtotal...')
     ### WRITE SOLUTION HERE
-    total = 0.0
+    subTotal = 0.0
     for order in order:
-        total += order["price"]
+        subTotal += order["price"]
     
-    return total
+    return subTotal
 
     raise NotImplementedError()
 
@@ -76,10 +76,16 @@ def summarize_order(order):
         tuple of names and total. The return statement should look like 
         
         return names, total
-
     """
     print_order(order)
     ### WRITE SOLUTION HERE
+    total = round(calculate_subtotal(order) + calculate_tax(order), 2)
+    names = [item["name"] for item in order]
+    print('You ordered ' + str(len(order)) + ' items')
+
+    print(names, total)
+
+    return names, total
 
     raise NotImplementedError()
 
@@ -123,7 +129,7 @@ def main():
     tax = calculate_tax(subtotal)
     print("Tax for the order is: " + str(tax))
 
-    # items, subtotal = summarize_order(order)
+    items, subtotal = summarize_order(order)
 
 if __name__ == "__main__":
     main()
