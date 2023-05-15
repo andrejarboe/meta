@@ -35,7 +35,11 @@ def calculate_subtotal(order):
     """
     print('Calculating bill subtotal...')
     ### WRITE SOLUTION HERE
+    total = 0.0
+    for order in order:
+        total += order["price"]
     
+    return total
 
     raise NotImplementedError()
 
@@ -113,8 +117,8 @@ def main():
     order = take_order()
     print_order(order)
 
-    # subtotal = calculate_subtotal(order)
-    # print("Subtotal for the order is: " + str(subtotal))
+    subtotal = calculate_subtotal(order)
+    print("Subtotal for the order is: " + str(subtotal))
 
     # tax = calculate_tax(subtotal)
     # print("Tax for the order is: " + str(tax))
